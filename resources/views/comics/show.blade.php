@@ -1,6 +1,10 @@
 @extends('layouts.app')
 
-@section('title','{{$comic->title}}')
+@section('title')
+
+    {{$comic->title}}
+
+@endsection
 @section('content')
     <div class="container text-center">
         <h1>{{$comic->title}}</h1>    
