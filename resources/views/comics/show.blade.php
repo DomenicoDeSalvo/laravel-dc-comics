@@ -8,7 +8,7 @@
 @section('content')
     <div class="container">
         <div>
-            <a href="{{route('comics.index')}}">Torna indietro &#8592;</a>
+            <a class='btn btn-secondary' href="{{route('comics.index')}}">Torna indietro &#8592;</a>
         </div>
     </div>
     <div class="container text-center">
