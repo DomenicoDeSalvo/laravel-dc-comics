@@ -8,7 +8,7 @@
 </head>
 <body>
     {{-- @include('partials.header') --}}
-    <main class="container text-center my-5">
+    <main class="container  my-5">
         @yield('content')
     </main>
     {{-- @include('partials.footer') --}}

@@ -12,7 +12,7 @@
                     <div class="card flex-fill">
                         <img src="{{ $comic->thumb }}" class="card-img-top" alt="...">
                         <div class="card-body">
-                            <a class="link-dark link-underline link-underline-opacity-0" href="/comics/{{$comic -> id}}">
+                            <a class="link-dark link-underline link-underline-opacity-0" href="{{route('comics.show', $comic)}}">
                                 <h5 class="card-title text-center">{{$comic->title}}</h5>
                             </a>
                             <p class="card-text">{{$comic->series}}</p>

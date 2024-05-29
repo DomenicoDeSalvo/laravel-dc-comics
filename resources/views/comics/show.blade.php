@@ -6,6 +6,11 @@
 
 @endsection
 @section('content')
+    <div class="container">
+        <div>
+            <a href="{{route('comics.index')}}">Torna indietro <-</a>
+        </div>
+    </div>
     <div class="container text-center">
         <h1>{{$comic->title}}</h1>    
     </div>
