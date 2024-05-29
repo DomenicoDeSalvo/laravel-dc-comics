@@ -14,4 +14,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [ResourceController::class, 'comics'])->name('comics');
+Route::get('/', function () {
+    return view('welcome');
+});
+
+Route::get('/comics', [ResourceController::class, 'index'])->name('comics.index');
+
