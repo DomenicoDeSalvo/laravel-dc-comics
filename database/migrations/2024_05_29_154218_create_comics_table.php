@@ -15,10 +15,10 @@ return new class extends Migration
             $table->id();
             $table->string('title');
             $table->text('description');
-            $table->text('thumb');
+            $table->string('thumb');
             $table->string('price');
             $table->string('series');
-            $table->dateTime('sale_date', $precisiom = 0);
+            $table->dateTime('sale_date', $precision = 0);
             $table->string('type', 50);
             $table->json('artists');
             $table->json('writers');
