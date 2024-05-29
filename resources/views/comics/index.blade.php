@@ -6,6 +6,9 @@
         <h1>COMICS</h1>    
     </div>
     <div class="container">
+        <a class='btn btn-secondary' href="{{route('comics.create')}}">Aggiungi Fumetto</a>
+    </div>
+    <div class="container">
             <div class="row row-cols-6">
                 @foreach ($comics as $comic)
                 <div class="col  my-4 d-flex align-items-stretch">
