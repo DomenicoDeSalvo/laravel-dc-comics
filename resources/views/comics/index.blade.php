@@ -8,12 +8,14 @@
     <div class="container">
             <div class="row row-cols-6">
                 @foreach ($comics as $comic)
-                    <div class="col  my-4 d-flex align-items-stretch">
-                        <div class="card flex-fill">
-                            <img src="{{ $comic->thumb }}" class="card-img-top" alt="...">
-                            <div class="card-body">
+                <div class="col  my-4 d-flex align-items-stretch">
+                    <div class="card flex-fill">
+                        <img src="{{ $comic->thumb }}" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <a class="link-dark link-underline link-underline-opacity-0" href="/comics/{{$comic -> id}}">
                                 <h5 class="card-title text-center">{{$comic->title}}</h5>
-                                <p class="card-text">{{$comic->series}}</p>
+                            </a>
+                            <p class="card-text">{{$comic->series}}</p>
                             </div>
                         </div>
                     </div>
