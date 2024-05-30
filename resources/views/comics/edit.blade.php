@@ -28,7 +28,7 @@
             </div>
             <div class="mb-3">
                 <label for="thumb" class="form-label">Copertina</label>
-                <input type="file" name="thumb" class="form-control" id="thumb" value="{{$comic->thumb}}" placeholder="URL copertina">
+                <input type="text" name="thumb" class="form-control" id="thumb" value="{{$comic->thumb}}" placeholder="URL copertina">
             </div>
             <div class="mb-3">
                 <label for="price" class="form-label">Prezzo</label>

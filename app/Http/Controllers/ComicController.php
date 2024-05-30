@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 
 class ComicController extends Controller
 {
+    //MI LASCIO ANCHE LA VERSIONE ESTESA PER RICORDARMELA
     public function index() {
 
         $comics = Comic::all();
@@ -31,7 +32,6 @@ class ComicController extends Controller
 
         $new_comic = Comic::create($form_data);
 
-        //MI LASCIO ANCHE LA VERSIONE ESTESA PER RICORDARMELA
 
         // $new_comic = new Comic();
 
@@ -54,7 +54,9 @@ class ComicController extends Controller
         return view('comics.edit', compact('comic'));
     }
 
-    public function update(){
-        
+    public function update(Request $request, Comic $comic){
+        $form_data = $request->all();
+        $comic->update($form_data);
+        return redirect()->route('comics.show', $comic);
     }
 }
