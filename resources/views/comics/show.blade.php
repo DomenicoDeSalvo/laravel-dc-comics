@@ -7,9 +7,16 @@
 @endsection
 @section('content')
     <div class="container">
-        <div>
-            <a class='btn btn-secondary' href="{{route('comics.index')}}">Torna a index &#8592;</a>
-            <a class='btn btn-secondary' href="{{route('comics.edit', $comic)}}">Modifica</a>
+        <div class="d-flex justify-content-between">
+            <div>
+                <a class='btn btn-secondary' href="{{route('comics.index')}}">Torna a index &#8592;</a>
+                <a class='btn btn-secondary' href="{{route('comics.edit', $comic)}}">Modifica</a>
+            </div>
+            <form action="{{route ('comics.destroy', $comic)}}" method="POST">
+                @method('DELETE')
+                @csrf
+                <button class="btn-danger btn">Elimina</button>
+            </form>
         </div>
     </div>
     <div class="container text-center">
