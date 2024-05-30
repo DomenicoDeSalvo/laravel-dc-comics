@@ -19,7 +19,12 @@
                             <h5 class="card-title text-center">{{$comic->title}}</h5>
                         </a>
                         <p class="card-text">{{$comic->series}}</p>
-                        <a href="{{route('comics.edit', $comic)}}">Modifica</a>
+                        <a class='btn btn-secondary' href="{{route('comics.edit', $comic)}}">Modifica</a>
+                        <form action="{{route ('comics.destroy', $comic)}}" method="POST">
+                            @method('DELETE')
+                            @csrf
+                            <button class="btn-danger btn">Elimina</button>
+                        </form>
                     </div>
                 </div>
             </div>

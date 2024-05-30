@@ -59,4 +59,9 @@ class ComicController extends Controller
         $comic->update($form_data);
         return redirect()->route('comics.show', $comic);
     }
+
+    public function destroy(Comic $comic){
+        $comic->delete();
+        return to_route('comics.index');
+    }
 }
