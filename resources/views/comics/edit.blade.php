@@ -13,9 +13,10 @@
         <h2>Modifica {{$comic->title}}</h2>    
     </div>
     <div class="container">
-        <form action="" method="POST">
+        <form action="{{route('comics.update',$comic)}}" method="POST">
 
             @csrf
+            @method('PUT')
 
             <div class="mb-3">
                 <label for="title" class="form-label">Titolo</label>
