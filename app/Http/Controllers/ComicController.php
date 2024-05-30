@@ -32,7 +32,7 @@ class ComicController extends Controller
         $new_comic = Comic::create($form_data);
 
         //MI LASCIO ANCHE LA VERSIONE ESTESA PER RICORDARMELA
-        
+
         // $new_comic = new Comic();
 
         // $new_comic->title = $form_data['title'];
@@ -48,5 +48,9 @@ class ComicController extends Controller
         // $new_comic->save();
 
         return redirect()->route('comics.show', $new_comic);
+    }
+
+    public function edit(Comic $comic){
+        return view('comics.edit', compact('comic'));
     }
 }
