@@ -35,7 +35,7 @@
             </div>
             <div class="mb-3">
                 <label for="sale_date" class="form-label">Data di acquisto</label>
-                <input type="text" name="sale_date" class="form-control" id="sale_date" value="{{old('sale_date')}}" placeholder="Formato AAAA-MM-GG">
+                <input type="date" name="sale_date" class="form-control" id="sale_date" value="{{old('sale_date')}}" >
             </div>
             <div class="mb-3">
                 <label for="type" class="form-label">Genere</label>
